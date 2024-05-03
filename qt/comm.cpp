@@ -2,7 +2,9 @@
 #include "ui_comm.h"
 Result<struct TempHum_Quaternion> res;
 
-extern struct User user;
+extern struct Quaternion _qua;
+
+unsigned int debug_text_req_size = 0;
 
 comm::comm(QWidget *parent) :
     QWidget(parent),
@@ -80,24 +82,49 @@ Option comm::serialPost_Init(){
     serialPort.setParity(QSerialPort::NoParity);
 }
 Option comm::serialPost_ReadData_from_port(){
+    if(debug_text_req_size == 10){
+        //ui->debug_textEdit->clear();
+        debug_text_req_size = 0;
+    }
     res.data.size = 0;
 
     if(!serialPort.isOpen()){
         return Err;
     }
+    QString data;
+    bool isRead= false;
 
     QByteArray buffer;
 
-    buffer = serialPort.readAll();
+    buffer = serialPort.readLine();
 
     if(buffer.isEmpty()){
         return Err;
     }
     QString str = QString::fromLocal8Bit(buffer); //支持中文显示
-    ui->debug_textEdit->append(str);
+
+    if(str == "start\n"){
+        isRead = true;
+        data.append(str);
+    }
 
 
-    get_data_from_string(str);
+    while(isRead){
+        QString temp = QString::fromLocal8Bit(serialPort.readLine());
+        data.append(temp);
+        if(temp == "over\n"){
+            isRead = false;
+            break;
+        }
+
+    }
+
+    ui->debug_textEdit->append(data);
+
+
+    get_data_from_string(data);
+
+    debug_text_req_size++;
 
 }
 
@@ -267,6 +294,9 @@ Option comm::get_value_from_string(QString str){
 
 Option comm::get_data_from_string(QString str){
     QStringList str_list = str.split("\n");
+    if(str_list[0] != "start"){
+        return Err;
+    }
 
     foreach (QString item, str_list) {
         if(item == "start" || item == ""){
@@ -293,7 +323,7 @@ Option comm::get_data_from_string(QString str){
         ui->hum_value_label->setText(res.data.temp_hum.hum);
         res.E = Err;
         res.data.size = 0;
-
+        _qua = res.data.qua;
         db_insert_temp_and_hum(res.data.temp_hum);
         db_insert_quaternion(res.data.qua);
     }

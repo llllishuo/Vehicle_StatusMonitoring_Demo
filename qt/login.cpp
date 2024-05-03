@@ -8,23 +8,23 @@
 Id_Status login_id_status = Id_Status::User;
 struct User user;
 
-Widget::Widget(QWidget *parent)
+login::login(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::Widget)
+    , ui(new Ui::login)
 {
 
     ui->setupUi(this);
 
 }
 
-Widget::~Widget()
+login::~login()
 {
     delete ui;
     delete main_widget;
 }
 
 
-void Widget::on_login_but_clicked()
+void login::on_login_but_clicked()
 {
 
     ui->login_err_label->setText("");
@@ -57,7 +57,7 @@ void Widget::on_login_but_clicked()
 }
 
 
-void Widget::on_switch_but_clicked()
+void login::on_switch_but_clicked()
 {
     if(login_id_status == Id_Status::User){
         login_id_status = Id_Status::Root;
@@ -71,7 +71,7 @@ void Widget::on_switch_but_clicked()
 
 
 
-void Widget::on_logon_but_clicked(){
+void login::on_logon_but_clicked(){
     logon_widget = new logonWidget();
     logon_widget->show();
 }

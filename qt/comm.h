@@ -12,6 +12,7 @@
 #include <QTimer>
 #include <QDateTime>
 
+extern struct User user;
 
 namespace Ui {
 class comm;

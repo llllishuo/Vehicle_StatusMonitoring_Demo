@@ -65,9 +65,15 @@ struct Time{
     unsigned int hour;
     unsigned int min;
     double s;
+    unsigned int stamp;
 
 };
 Result<struct Time> toTime_from_string(QString str);
+
+
+unsigned int is_leap_year(uint16_t year);
+
+unsigned int time_to_stamp(struct Time date);
 
 
 

@@ -1,21 +1,19 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 
-#include <QWidget>
 #include "mainwidget.h"
-#include "DataModel.h"
 #include "database.h"
 #include "logon.h"
 
-namespace Ui { class Widget; }
+namespace Ui { class login; }
 
-class Widget : public QWidget
+class login : public QWidget
 {
     Q_OBJECT
 
 public:
-    Widget(QWidget *parent = nullptr);
-    ~Widget();
+    login(QWidget *parent = nullptr);
+    ~login();
 
 private slots:
     void on_login_but_clicked();
@@ -24,7 +22,7 @@ private slots:
     void on_switch_but_clicked();
 
 private:
-    Ui::Widget *ui;
+    Ui::login *ui;
     mainWidget *main_widget;
     logonWidget *logon_widget;
 };

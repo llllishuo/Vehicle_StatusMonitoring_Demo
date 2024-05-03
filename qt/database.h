@@ -16,6 +16,7 @@ extern struct User user;
 static QSqlDatabase database;
 
 
+
 Option db_Init();
 
 Option db_username_is_have(QString username);
@@ -34,6 +35,9 @@ Result<struct TempHum> db_insert_temp_and_hum(struct TempHum th);
 Result<struct Quaternion> db_insert_quaternion(struct Quaternion qua);
 
 Result<QVector<struct TempHum>> db_select_vec_temp_and_hum_where_userId(QString userId);
+
+Result<struct Quaternion> db_select_top_one_from_qua_where_user_id(QString userId);
+
 
 
 

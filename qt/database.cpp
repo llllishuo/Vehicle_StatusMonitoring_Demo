@@ -1,5 +1,6 @@
 #include "database.h"
 
+struct Quaternion _qua;
 
 
 Option db_Init(){
@@ -181,7 +182,7 @@ Result<struct TempHum> db_insert_temp_and_hum(struct TempHum th){
     qry.bindValue(":t", th.temp);
     qry.bindValue(":h", th.hum);
     qry.bindValue(":time", time);
-    qDebug()<<"[Debug] insert temp and hum to user: "<<user.id<<"\n";
+    //qDebug()<<"[Debug] insert temp and hum to user: "<<user.id<<"\n";
     bool re = qry.exec();
 
     if(!re){
@@ -246,7 +247,7 @@ Result<QVector<struct TempHum>> db_select_vec_temp_and_hum_where_userId(QString 
     Result<QVector<struct TempHum>> res;
     QVector<struct TempHum> temp_hum_vec;
     QSqlQuery qry(database);
-    QString sql = "select id, temp, hum, time from vs_tempHum where user_id = :i";
+    QString sql = "select id, temp, hum, time from vs_tempHum where user_id = :i ORDER BY time ASC";
     //QString sql = "select id, temp, hum, time from vs_tempHum";
 
     qry.prepare(sql);
@@ -272,7 +273,36 @@ Result<QVector<struct TempHum>> db_select_vec_temp_and_hum_where_userId(QString 
 
 }
 
+Result<struct Quaternion> db_select_top_one_from_qua_where_user_id(QString userId){
 
+    Result<struct Quaternion> res;
+    QSqlQuery qry(database);
+    QString sql = "SELECT * FROM vs_quaternion where user_id = :u ORDER BY time DESC limit 1";
+
+    qry.prepare(sql);
+    qry.bindValue(":u", userId);
+    bool re = qry.exec();
+    if(!re){
+        res.msg = "最新一条姿态查询失败!";
+        res.E = Option::Err;
+        return res;
+    }
+    qry.next();
+    res.data.id = qry.value("id").toString();
+    res.data.user_id = qry.value("user_id").toString();
+    res.data.pitch = qry.value("pitch").toString();
+    res.data.roll = qry.value("roll").toString();
+    res.data.yaw = qry.value("yaw").toString();
+    res.data.accelX = qry.value("accelX").toString();
+    res.data.accelY = qry.value("accelY").toString();
+    res.data.accelZ = qry.value("accelZ").toString();
+    res.data.gyroX = qry.value("gyroX").toString();
+    res.data.gyroY = qry.value("gyroY").toString();
+    res.data.gyroZ = qry.value("gyroZ").toString();
+    res.E = Option::Ok;
+    return res;
+
+}
 
 
 

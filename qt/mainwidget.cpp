@@ -7,38 +7,53 @@ mainWidget::mainWidget(QWidget *parent) :
 {
 
     ui->setupUi(this);
-    ui->show_widget->setStyleSheet(QString::fromUtf8("#show_widget{border:1px solid black}"));
-
-
-    comm_ui = new comm(ui->show_widget);
-    comm_ui->resize(ui->show_widget->size());
-    display_ui = new display(ui->show_widget);
-    display_ui->resize(ui->show_widget->size());
-
-    display_ui->hide();
-    comm_ui->show();
 }
 
 mainWidget::~mainWidget()
 {
     delete ui;
     delete comm_ui;
-    delete display_ui;
+    delete temp_hum_dispaly_ui;
 }
 
 void mainWidget::on_comm_toolBut_clicked()
 {
-    display_ui->hide();
+    comm_ui = new comm();
     comm_ui->show();
 }
 
 
-void mainWidget::on_dispaly_toolBut_clicked()
+
+
+
+
+void mainWidget::on_qua_display_toolButton_clicked()
 {
-    comm_ui->hide();
-    display_ui->show();
+
+    qua_display_ui = new qua_dispaly();
+    qua_display_ui->show();
+}
+
+
+void mainWidget::on_temp_hum_dispaly_toolBut_clicked()
+{
+
+    temp_hum_dispaly_ui = new temp_hum_display();
+    temp_hum_dispaly_ui->show();
+}
+
+
+void mainWidget::on_user_switch_toolBut_clicked()
+{
 
 }
 
 
+void mainWidget::on_exit_toolBut_clicked()
+{
+   qua_display_ui->close();
+   temp_hum_dispaly_ui->close();
+   comm_ui->close();
+   this->close();
+}
 
