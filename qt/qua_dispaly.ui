@@ -11,7 +11,12 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>姿态检测----请到主界面打开串口</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -24,139 +29,237 @@
          <height>340</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(85, 0, 0);</string>
+       </property>
       </widget>
      </item>
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <layout class="QFormLayout" name="formLayout">
-         <item row="0" column="0">
-          <widget class="QLabel" name="yaw_label">
-           <property name="text">
-            <string>航偏角Yaw:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="yaw_value_label">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="pitch_label">
-           <property name="text">
-            <string>仰俯角Pitch:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLabel" name="pitch_value_label">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="roll_label">
-           <property name="text">
-            <string>横滚角Roll:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLabel" name="roll_value_label">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="gyro_x_label">
-           <property name="text">
-            <string>陀螺仪GyroX:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QLabel" name="gyro_x_value_label">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="gyro_y_label">
-           <property name="text">
-            <string>陀螺仪GyroY:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QLabel" name="gyro_y_value_label">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="gyro_z_label">
-           <property name="text">
-            <string>陀螺仪GyroZ:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="1">
-          <widget class="QLabel" name="gyro_z_value_label">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="accl_x_label">
-           <property name="text">
-            <string>加速度AccX:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="1">
-          <widget class="QLabel" name="accl_x_value_label">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="accl_y_label">
-           <property name="text">
-            <string>加速度AccY:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="1">
-          <widget class="QLabel" name="accl_y_value_label">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="0">
-          <widget class="QLabel" name="accl_z_label">
-           <property name="text">
-            <string>加速度AccZ</string>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="1">
-          <widget class="QLabel" name="accl_z_value_label">
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <widget class="QWidget" name="" native="true">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(170, 85, 127);</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="yaw_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>航偏角Yaw:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="yaw_value_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="pitch_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>仰俯角Pitch:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="pitch_value_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="roll_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>横滚角Roll:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="roll_value_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="gyro_x_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>陀螺仪GyroX:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLabel" name="gyro_x_value_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="gyro_y_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>陀螺仪GyroY:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLabel" name="gyro_y_value_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="gyro_z_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>陀螺仪GyroZ:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLabel" name="gyro_z_value_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="accl_x_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>加速度AccX:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLabel" name="accl_x_value_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="accl_y_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>加速度AccY:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLabel" name="accl_y_value_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="accl_z_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>加速度AccZ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QLabel" name="accl_z_value_label">
+            <property name="styleSheet">
+             <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
         <spacer name="verticalSpacer">

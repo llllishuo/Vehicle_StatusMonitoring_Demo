@@ -270,31 +270,37 @@ Option temp_hum_display::curve_create(QVector<struct TempHum> data){
 
     QString time_unit = "";
 
+
     switch (temp_hum_screen_key) {
     case 0:
         time_unit = "s";
         temp_x->setRange(0.00, 60.00);
         hum_x->setRange(0.00, 60.00);
-        temp_x->setLabelFormat("%0.2fs");
-        temp_x->setLabelFormat("%0.2fs");
+        temp_x->setLabelFormat("%0.1fs");
+        hum_x->setLabelFormat("%0.1fs");
+
         break;
     case 1:
         time_unit = "m";
         temp_x->setRange(0.00, 60.00);
         hum_x->setRange(0.00, 60.00);
-        temp_x->setLabelFormat("%0.2fm");
-        temp_x->setLabelFormat("%0.2fm");
+        temp_x->setLabelFormat("%0.1fm");
+        hum_x->setLabelFormat("%0.1fm");
         break;
     case 2:
         time_unit = "d";
         temp_x->setRange(0.00, 24.00);
         hum_x->setRange(0.00, 24.00);
-        temp_x->setLabelFormat("%0.2fh");
-        temp_x->setLabelFormat("%0.2fh");
+        temp_x->setLabelFormat("%0.1fh");
+        hum_x->setLabelFormat("%0.1fh");
         break;
     default:
         break;
     }
+    temp_x->setTickCount(5);
+    hum_x->setTickCount(5);
+    temp_x->setTickType(QValueAxis::TicksFixed);
+    hum_x->setTickType(QValueAxis::TicksFixed);
 
     temp_series->setPointLabelsClipping(false);
     hum_series->setPointLabelsClipping(false);
@@ -312,19 +318,16 @@ Option temp_hum_display::curve_create(QVector<struct TempHum> data){
         double hum = item.hum.toDouble();
         unsigned int time_diff = res.data.stamp - item_time.data.stamp;
         if(temp_hum_screen_key == 0 && time_diff <= 60){
-            double x = item_time.data.s;
             temp_time_x_value[(int)item_time.data.s] += temp;
             temp_time_x_value[60 + (int)item_time.data.s] += 1;
             hum_time_x_value[(int)item_time.data.s] += hum;
             hum_time_x_value[60 + (int)item_time.data.s] += 1;
         }else if(temp_hum_screen_key == 1 && time_diff <= 60 * 60){
-            double x = item_time.data.min * 60 + item_time.data.s;
             temp_time_x_value[(int)item_time.data.min] += temp;
             temp_time_x_value[60 + (int)item_time.data.min] += 1;
             hum_time_x_value[(int)item_time.data.min] += hum;
             hum_time_x_value[60 + (int)item_time.data.min] += 1;
         }else if(temp_hum_screen_key == 2 && time_diff <= 60 * 60 * 24){
-            double x = item_time.data.hour * 60 * 60 + item_time.data.min * 60 + item_time.data.s;
             temp_time_x_value[(int)item_time.data.hour] += temp;
             temp_time_x_value[24 + (int)item_time.data.hour] += 1;
             hum_time_x_value[(int)item_time.data.hour] += hum;

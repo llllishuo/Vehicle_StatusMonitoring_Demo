@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>串口</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 85, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
@@ -19,61 +23,121 @@
      <item>
       <layout class="QVBoxLayout" name="comm_sp_verticalLayout">
        <item>
-        <layout class="QFormLayout" name="serialPort_setting_formLayout">
-         <item row="0" column="0">
-          <widget class="QLabel" name="port_label">
-           <property name="text">
-            <string>端口:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QComboBox" name="port_comboBox"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="baudRate_label">
-           <property name="text">
-            <string>波特率:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QComboBox" name="baudRate_comboBox"/>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="dataBits_label">
-           <property name="text">
-            <string>数据位:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QComboBox" name="dataBits_comboBox"/>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="stopBits_label">
-           <property name="text">
-            <string>停止位:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QComboBox" name="stopBits_comboBox"/>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="checkBits_label">
-           <property name="text">
-            <string>检验:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QComboBox" name="checkBits_comboBox"/>
-         </item>
-        </layout>
+        <widget class="QWidget" name="" native="true">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(85, 0, 0);</string>
+         </property>
+         <layout class="QFormLayout" name="serialPort_setting_formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="port_label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>端口:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="port_comboBox">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="baudRate_label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>波特率:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="baudRate_comboBox">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="dataBits_label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>数据位:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="dataBits_comboBox">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="stopBits_label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>停止位:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="stopBits_comboBox">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="checkBits_label">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+            <property name="text">
+             <string>检验:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="checkBits_comboBox">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="serialPort_search_but">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+         </property>
          <property name="text">
           <string>搜索串口</string>
          </property>
@@ -81,6 +145,11 @@
        </item>
        <item>
         <widget class="QPushButton" name="serialPort_open_but">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+         </property>
          <property name="text">
           <string>打开串口</string>
          </property>
@@ -106,259 +175,390 @@
        <item>
         <layout class="QVBoxLayout" name="debug_verticalLayout">
          <item>
-          <layout class="QHBoxLayout" name="debug_text_horizontalLayout">
-           <item>
-            <spacer name="horizontalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QLabel" name="debug_label">
-             <property name="text">
-              <string>调试信息</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
+          <widget class="QWidget" name="" native="true">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(170, 85, 0);</string>
+           </property>
+           <layout class="QHBoxLayout" name="debug_text_horizontalLayout">
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLabel" name="debug_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>调试信息</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
          </item>
          <item>
-          <widget class="QTextEdit" name="debug_textEdit"/>
+          <widget class="QTextEdit" name="debug_textEdit">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(170, 85, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="numValue_horizontalLayout">
-         <item>
-          <spacer name="horizontalSpacer_5">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <layout class="QFormLayout" name="temp_formLayout">
-           <item row="0" column="0">
-            <widget class="QLabel" name="temp_label">
-             <property name="text">
-              <string>温度:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="hum_label">
-             <property name="text">
-              <string>湿度:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="temp_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLabel" name="hum_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <layout class="QFormLayout" name="posture_formLayout">
-           <item row="0" column="0">
-            <widget class="QLabel" name="pitch_label">
-             <property name="text">
-              <string>pitch:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="roll_label">
-             <property name="text">
-              <string>roll:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="yaw_label">
-             <property name="text">
-              <string>yaw:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="pitch_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLabel" name="roll_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLabel" name="yaw_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QFormLayout" name="formLayout">
-           <item row="0" column="0">
-            <widget class="QLabel" name="accel_x_label">
-             <property name="text">
-              <string>accelX:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="accel_y_label">
-             <property name="text">
-              <string>accelY:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="accel_z_label">
-             <property name="text">
-              <string>accelZ:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="accel_x_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLabel" name="accel_y_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLabel" name="accel_z_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QFormLayout" name="formLayout_3">
-           <item row="0" column="0">
-            <widget class="QLabel" name="gyro_x_label">
-             <property name="text">
-              <string>gyroX:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="gyro_y_label">
-             <property name="text">
-              <string>gyroY:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="gyro_z_label">
-             <property name="text">
-              <string>gyroZ:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="gyro_x_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLabel" name="gyro_y_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLabel" name="gyro_z_value_label">
-             <property name="text">
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
+        <widget class="QWidget" name="" native="true">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(85, 0, 255);</string>
+         </property>
+         <layout class="QHBoxLayout" name="numValue_horizontalLayout">
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="temp_formLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="temp_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>温度:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="hum_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>湿度:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="temp_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="hum_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="posture_formLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="pitch_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>pitch:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="roll_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>roll:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="yaw_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>yaw:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="pitch_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="roll_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLabel" name="yaw_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="formLayout">
+            <item row="0" column="0">
+             <widget class="QLabel" name="accel_x_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>accelX:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="accel_y_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>accelY:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="accel_z_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>accelZ:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="accel_x_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="accel_y_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLabel" name="accel_z_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="formLayout_3">
+            <item row="0" column="0">
+             <widget class="QLabel" name="gyro_x_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>gyroX:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="gyro_y_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>gyroY:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="gyro_z_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string>gyroZ:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLabel" name="gyro_x_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLabel" name="gyro_y_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLabel" name="gyro_z_value_label">
+              <property name="styleSheet">
+               <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
        </item>
       </layout>
      </item>

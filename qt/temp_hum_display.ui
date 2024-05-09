@@ -11,7 +11,12 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>温湿度检测</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(85, 0, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_2">
    <item>
@@ -30,6 +35,11 @@
          <height>0</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 85, 0);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+       </property>
       </widget>
      </item>
      <item>
@@ -46,6 +56,11 @@
          <height>0</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 85, 127);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+       </property>
       </widget>
      </item>
     </layout>
@@ -53,47 +68,62 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_9">
-         <property name="text">
-          <string>筛选:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="temp_hum_screen_comboBox">
-         <item>
-          <property name="text">
-           <string>过去一分钟</string>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 0, 255);</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
           </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>过去一小时</string>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
           </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>过去一天</string>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_9">
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
           </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
+          <property name="text">
+           <string>筛选:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="temp_hum_screen_comboBox">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(85, 0, 0);
+color: rgb(255, 255, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>过去一分钟</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>过去一小时</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>过去一天</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </item>
      <item>
       <widget class="QTableWidget" name="temp_hum_tableWidget">
@@ -102,6 +132,12 @@
          <width>0</width>
          <height>0</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;
+</string>
        </property>
       </widget>
      </item>

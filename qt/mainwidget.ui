@@ -17,14 +17,23 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>主界面</string>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 85, 255);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="1">
     <widget class="QToolButton" name="temp_hum_dispaly_toolBut">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(85, 0, 127);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
      <property name="text">
       <string>温湿度</string>
      </property>
@@ -32,6 +41,11 @@
    </item>
    <item row="0" column="0">
     <widget class="QToolButton" name="comm_toolBut">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(85, 0, 127);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
      <property name="text">
       <string>串口</string>
      </property>
@@ -39,6 +53,11 @@
    </item>
    <item row="1" column="0">
     <widget class="QToolButton" name="qua_display_toolButton">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(85, 0, 127);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
      <property name="text">
       <string>姿态</string>
      </property>
@@ -51,6 +70,11 @@
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(85, 0, 127);
+font: 700 9pt &quot;FiraCode Nerd Font Mono&quot;;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>退出</string>
